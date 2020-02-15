@@ -1,0 +1,17 @@
+////
+/// Landing Component Styles
+///
+/// @author Pedro Tavarez <ptavarez16@gmail.com>
+////
+
+.Landing {
+  align-items: center;
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
