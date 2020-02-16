@@ -4,13 +4,10 @@
 /// @author Pedro Tavarez <ptavarez16@gmail.com>
 ////
 
+@import './colors';
 @import './components/index';
 
 body {
+  background-color: $backgroundColor;
   margin: 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }

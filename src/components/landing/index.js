@@ -5,18 +5,36 @@
  */
 
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Landing = () => {
   const handleClick = () => {}
 
   return (
-    <div className="Landing">
-      <h1>Pedro Tavarez</h1>
-      <h3>Software Engineer</h3>
-      <button onClick={handleClick} type="button">
-        Get To Know Me
-      </button>
-    </div>
+    <section className="Landing">
+      <div className="Landing-overlay" />
+      <div className="Landing-content">
+        <h1 className="Landing-content--heading">Pedro Tavarez</h1>
+        <p className="Landing-content--subHeading">Software Engineer</p>
+        <>
+          <a className="Landing-content--btn" href="/">
+            Get To Know Me <FontAwesomeIcon icon="chevron-down" />
+          </a>
+        </>
+        <ul className="Landing-content--social">
+          <li>
+            <a href="/">
+              <FontAwesomeIcon icon={['fab', 'github']} />
+            </a>
+          </li>
+          <li>
+            <a href="/">
+              <FontAwesomeIcon icon={['fab', 'linkedin-in']} />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
   )
 }
 

@@ -6,12 +6,104 @@
 
 .Landing {
   align-items: center;
-  background-color: #282c34;
-  color: white;
+  background-image: url(../../images/landing-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $fontColor;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
   justify-content: center;
-  min-height: 100vh;
+  height: 100vh;
+  position: relative;
   text-align: center;
+
+  &-overlay {
+    background-color: $backgroundColor;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    opacity: 0.85;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &-content {
+    z-index: 2;
+
+    &--heading {
+      font-size: 86px;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 0;
+    }
+
+    &--subHeading {
+      font-size: 1.7rem;
+      font-family: 'lora-regular', serif;
+      letter-spacing: 0.2rem;
+      margin-top: 5px;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+
+      &::after,
+      &::before {
+        content: '|';
+        color: rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        padding: 0 14px 0 8px;
+        position: relative;
+        text-align: center;
+      }
+    }
+
+    &--btn {
+      cursor: pointer;
+      color: $fontColor;
+      border: 3px solid #313131;
+      border-color: rgba(255, 255, 255, 0.3);
+      font-size: 0.7rem;
+      letter-spacing: 0.25rem;
+      padding: 1rem 2rem 1rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.5s;
+      transition-property: border-color;
+      width: 50px;
+
+      &:hover {
+        border-color: $hoverColor;
+      }
+    }
+
+    &--social {
+      bottom: 2rem;
+      left: 0;
+      padding: 0;
+      position: absolute;
+      right: 0;
+
+      ul {
+        display: inline-block;
+        float: none;
+        list-style: none;
+      }
+
+      li {
+        display: inline;
+        margin: 0 2rem 0 2rem;
+      }
+
+      a {
+        color: #fff;
+
+        &:hover {
+          color: $hoverColor;
+          transition: 0.5s;
+          transition-property: color;
+        }
+      }
+    }
+  }
 }
