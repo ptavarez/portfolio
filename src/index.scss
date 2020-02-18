@@ -4,10 +4,13 @@
 /// @author Pedro Tavarez <ptavarez16@gmail.com>
 ////
 
-@import './colors';
-@import './components/index';
+// Global Styles
+@import './global-styles/colors';
+@import './global-styles/breakpoints';
+// Portfolio Styles
+@import './resources/index';
 
 body {
-  background-color: $backgroundColor;
+  background-color: $black;
   margin: 0;
 }

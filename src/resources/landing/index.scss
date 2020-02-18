@@ -6,11 +6,10 @@
 
 .Landing {
   align-items: center;
-  background-image: url(../../images/landing-background.jpg);
+  background: url(../../images/landing-background.jpg) no-repeat fixed;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
-  color: $fontColor;
+  color: $white;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
@@ -20,7 +19,7 @@
   text-align: center;
 
   &-overlay {
-    background-color: $backgroundColor;
+    background-color: $black;
     bottom: 0;
     position: absolute;
     height: 100%;
@@ -37,15 +36,23 @@
       font-size: 86px;
       text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
       margin: 0;
+
+      @include respond-to('mobile') {
+        font-size: 43px;
+      }
     }
 
     &--subHeading {
-      font-size: 1.7rem;
+      font-size: 30px;
       font-family: 'lora-regular', serif;
       letter-spacing: 0.2rem;
       margin-top: 5px;
       margin-bottom: 3rem;
       text-transform: uppercase;
+
+      @include respond-to('mobile') {
+        font-size: 15px;
+      }
 
       &::after,
       &::before {
@@ -55,12 +62,16 @@
         padding: 0 14px 0 8px;
         position: relative;
         text-align: center;
+
+        @include respond-to('mobile') {
+          content: '';
+        }
       }
     }
 
     &--btn {
       cursor: pointer;
-      color: $fontColor;
+      color: $white;
       border: 3px solid #313131;
       border-color: rgba(255, 255, 255, 0.3);
       font-size: 0.7rem;
@@ -73,7 +84,7 @@
       width: 50px;
 
       &:hover {
-        border-color: $hoverColor;
+        border-color: $pink;
       }
     }
 
@@ -83,6 +94,11 @@
       padding: 0;
       position: absolute;
       right: 0;
+      z-index: 2;
+
+      @include respond-to('mobile') {
+        font-size: 2rem;
+      }
 
       ul {
         display: inline-block;
@@ -99,7 +115,7 @@
         color: #fff;
 
         &:hover {
-          color: $hoverColor;
+          color: $pink;
           transition: 0.5s;
           transition-property: color;
         }

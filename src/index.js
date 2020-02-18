@@ -9,7 +9,7 @@ import ReactDOM from 'react-dom'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
-import Portfolio from './components'
+import Portfolio from './resources'
 import * as serviceWorker from './serviceWorker'
 import './index.scss'
 
