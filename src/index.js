@@ -6,9 +6,14 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Portfolio from './components'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import Portfolio from './resources'
 import * as serviceWorker from './serviceWorker'
 import './index.scss'
+
+library.add(fab, faChevronDown)
 
 ReactDOM.render(<Portfolio />, document.getElementById('root'))
 

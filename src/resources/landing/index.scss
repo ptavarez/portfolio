@@ -1,0 +1,125 @@
+////
+/// Landing Component Styles
+///
+/// @author Pedro Tavarez <ptavarez16@gmail.com>
+////
+
+.Landing {
+  align-items: center;
+  background: url(../../images/landing-background.jpg) no-repeat fixed;
+  background-position: center;
+  background-size: cover;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  text-align: center;
+
+  &-overlay {
+    background-color: $black;
+    bottom: 0;
+    position: absolute;
+    height: 100%;
+    opacity: 0.85;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  &-content {
+    z-index: 2;
+
+    &--heading {
+      font-size: 86px;
+      text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      margin: 0;
+
+      @include respond-to('mobile') {
+        font-size: 43px;
+      }
+    }
+
+    &--subHeading {
+      font-size: 30px;
+      font-family: 'lora-regular', serif;
+      letter-spacing: 0.2rem;
+      margin-top: 5px;
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+
+      @include respond-to('mobile') {
+        font-size: 15px;
+      }
+
+      &::after,
+      &::before {
+        content: '|';
+        color: rgba(255, 255, 255, 0.3);
+        display: inline-block;
+        padding: 0 14px 0 8px;
+        position: relative;
+        text-align: center;
+
+        @include respond-to('mobile') {
+          content: '';
+        }
+      }
+    }
+
+    &--btn {
+      cursor: pointer;
+      color: $white;
+      border: 3px solid #313131;
+      border-color: rgba(255, 255, 255, 0.3);
+      font-size: 0.7rem;
+      letter-spacing: 0.25rem;
+      padding: 1rem 2rem 1rem 2rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.5s;
+      transition-property: border-color;
+      width: 50px;
+
+      &:hover {
+        border-color: $pink;
+      }
+    }
+
+    &--social {
+      bottom: 2rem;
+      left: 0;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      z-index: 2;
+
+      @include respond-to('mobile') {
+        font-size: 2rem;
+      }
+
+      ul {
+        display: inline-block;
+        float: none;
+        list-style: none;
+      }
+
+      li {
+        display: inline;
+        margin: 0 2rem 0 2rem;
+      }
+
+      a {
+        color: #fff;
+
+        &:hover {
+          color: $pink;
+          transition: 0.5s;
+          transition-property: color;
+        }
+      }
+    }
+  }
+}

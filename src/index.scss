@@ -4,13 +4,13 @@
 /// @author Pedro Tavarez <ptavarez16@gmail.com>
 ////
 
-@import './components/index';
+// Global Styles
+@import './global-styles/colors';
+@import './global-styles/breakpoints';
+// Portfolio Styles
+@import './resources/index';
 
 body {
+  background-color: $black;
   margin: 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
