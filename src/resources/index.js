@@ -6,10 +6,12 @@
 
 import React from 'react'
 import Landing from './landing'
+import About from './about'
 
 const Portfolio = () => (
   <div className="Portfolio">
     <Landing />
+    <About />
   </div>
 )
 

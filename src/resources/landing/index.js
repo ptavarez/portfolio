@@ -14,7 +14,7 @@ const Landing = () => (
       <h1 className="Landing-content--heading">Pedro Tavarez</h1>
       <p className="Landing-content--subHeading">Software Engineer</p>
       <>
-        <a className="Landing-content--btn" href="/">
+        <a className="Landing-content--btn" href="#About">
           Get To Know Me <FontAwesomeIcon icon="chevron-down" />
         </a>
       </>
